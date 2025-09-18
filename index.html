@@ -175,6 +175,14 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
+        .email-link .full-email {
+            display: inline;
+        }
+        
+        .email-link .short-text {
+            display: none;
+        }
+
         .email-link:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
@@ -322,7 +330,8 @@
                 <h3>Ready to Join Our Team?</h3>
                 <p>Send us your resume and any questions you might have!</p>
                 <a href="mailto:Eshaw@rebellionautomation.com" class="email-link">
-                    📧 Contact Us: Eshaw@rebellionautomation.com
+                    <span class="full-email">📧 Contact Us: Eshaw@rebellionautomation.com</span>
+                    <span class="short-text">📧 Contact Us</span>
                 </a>
             </div>
         </main>
