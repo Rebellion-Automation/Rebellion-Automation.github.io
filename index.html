@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Our Team - Rebellion Automation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px 20px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .company-name {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .company-description {
+            font-size: 1.2em;
+            color: #5a6c7d;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .jobs-section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .section-title {
+            font-size: 2.2em;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+
+        .positions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .position-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 30px;
+            border-left: 5px solid #667eea;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .position-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .position-title {
+            font-size: 1.4em;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .position-card ul {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .position-card li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .position-card li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .requirements-section {
+            background: #e8f4f8;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+            border-left: 5px solid #17a2b8;
+        }
+
+        .benefits-section {
+            background: #f0f8f0;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+            border-left: 5px solid #28a745;
+        }
+
+        .highlight-box {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .highlight-box h3 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+
+        .contact-section {
+            background: #2c3e50;
+            color: white;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .email-link {
+            display: inline-block;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1.1em;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .email-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            .company-name {
+                font-size: 2em;
+            }
+
+            .section-title {
+                font-size: 1.8em;
+            }
+
+            .positions-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .header, .jobs-section {
+                padding: 25px 15px;
+            }
+
+            .position-card {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .company-name {
+                font-size: 1.6em;
+            }
+
+            .company-description {
+                font-size: 1em;
+            }
+
+            .positions-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="company-name">Rebellion Automation LLC</h1>
+            <p class="company-description">
+                Building automated storage and retrieval systems for warehouse pallet management
+            </p>
+        </header>
+
+        <main class="jobs-section">
+            <h2 class="section-title">We're Hiring!</h2>
+            
+            <div class="highlight-box">
+                <h3>🎯 3 Junior Software Engineer Positions Available</h3>
+                <p>Join our innovative team and help revolutionize warehouse automation!</p>
+            </div>
+
+            <div class="positions-grid">
+                <div class="position-card">
+                    <h3 class="position-title">🎨 Front End Web UI Developer</h3>
+                    <ul>
+                        <li>Build HMI (Human Machine Interface) for operators and floor managers</li>
+                        <li>Develop interfaces to view and control warehouse robots</li>
+                        <li>Work with Vue.js framework</li>
+                        <li>Lead UI/UX design initiatives</li>
+                        <li>Strong attention to detail required</li>
+                    </ul>
+                </div>
+
+                <div class="position-card">
+                    <h3 class="position-title">⚙️ Back End DevOps/Process Management</h3>
+                    <ul>
+                        <li>Focus on warehouse inventory management solutions</li>
+                        <li>Interface with external devices and systems</li>
+                        <li>Manage communication with backend servers</li>
+                        <li>Learn and solve industry-specific challenges</li>
+                        <li>Create and maintain DevOps deployment pipelines</li>
+                    </ul>
+                </div>
+
+                <div class="position-card">
+                    <h3 class="position-title">🔧 Back End General Developer</h3>
+                    <ul>
+                        <li>Assist wherever needed to balance team workload</li>
+                        <li>Focus on debugging and testing</li>
+                        <li>Handle smaller tasks from the workflow board</li>
+                        <li>Support the development team across projects</li>
+                        <li>Contribute to overall system reliability</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="requirements-section">
+                <h3>📋 Position Requirements</h3>
+                <p><strong>All positions require frequent travel to onsite locations</strong> for system installation, maintenance, and client support.</p>
+            </div>
+
+            <div class="benefits-section">
+                <h3>🏔️ Work Location & Benefits</h3>
+                <ul style="list-style: none; margin-left: 0;">
+                    <li style="margin-bottom: 10px;">🏠 <strong>Remote work available</strong>, but we'd love to have you relocate to the beautiful Flathead Valley, Montana!</li>
+                    <li style="margin-bottom: 10px;">💰 <strong>Salary:</strong> $70,000 - $85,000 per year</li>
+                    <li style="margin-bottom: 10px;">🏥 <strong>Health insurance</strong> included</li>
+                    <li style="margin-bottom: 10px;">📅 <strong>Start date:</strong> November 1st, 2025 (earliest)</li>
+                    <li style="margin-bottom: 10px;">🤝 <strong>In-person collaboration</strong> makes for a better work experience!</li>
+                </ul>
+            </div>
+
+            <div class="contact-section">
+                <h3>Ready to Join Our Team?</h3>
+                <p>Send us your resume and any questions you might have!</p>
+                <a href="mailto:Eshaw@rebellionautomation.com" class="email-link">
+                    📧 Contact Us: Eshaw@rebellionautomation.com
+                </a>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
