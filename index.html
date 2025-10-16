@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Join Our Team - Rebellion Automation</title>
+    <title>Positions Filled - Rebellion Automation</title>
     <style>
         * {
             margin: 0;
@@ -55,87 +55,50 @@
             padding: 40px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             backdrop-filter: blur(10px);
+            text-align: center;
         }
 
         .section-title {
             font-size: 2.2em;
             color: #2c3e50;
             text-align: center;
-            margin-bottom: 40px;
-            position: relative;
+            margin-bottom: 20px;
         }
 
-        .section-title::after {
-            content: '';
+        .robot-container {
+            margin: 40px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 300px;
+        }
+
+        .robot {
+            display: inline-block;
+            animation: dance 1s ease-in-out infinite;
+        }
+
+        .robot-body {
+            font-size: 120px;
             display: block;
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            margin: 10px auto;
-            border-radius: 2px;
+            animation: bounce 0.5s ease-in-out infinite alternate;
         }
 
-        .positions-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
+        .robot-text {
+            font-size: 1.2em;
+            color: #5a6c7d;
+            margin-top: 20px;
         }
 
-        .position-card {
-            background: #f8f9fa;
-            border-radius: 15px;
-            padding: 30px;
-            border-left: 5px solid #667eea;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        @keyframes dance {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(-5deg); }
+            75% { transform: rotate(5deg); }
         }
 
-        .position-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-        }
-
-        .position-title {
-            font-size: 1.4em;
-            font-weight: 600;
-            color: #2c3e50;
-            margin-bottom: 15px;
-        }
-
-        .position-card ul {
-            list-style: none;
-            margin-left: 0;
-        }
-
-        .position-card li {
-            margin-bottom: 8px;
-            position: relative;
-            padding-left: 20px;
-        }
-
-        .position-card li::before {
-            content: '→';
-            position: absolute;
-            left: 0;
-            color: #667eea;
-            font-weight: bold;
-        }
-
-        .requirements-section {
-            background: #e8f4f8;
-            border-radius: 15px;
-            padding: 25px;
-            margin: 30px 0;
-            border-left: 5px solid #17a2b8;
-        }
-
-        .benefits-section {
-            background: #f0f8f0;
-            border-radius: 15px;
-            padding: 25px;
-            margin: 30px 0;
-            border-left: 5px solid #28a745;
+        @keyframes bounce {
+            0% { transform: translateY(0px); }
+            100% { transform: translateY(-20px); }
         }
 
         .highlight-box {
@@ -201,17 +164,16 @@
                 font-size: 1.8em;
             }
 
-            .positions-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-
             .header, .jobs-section {
                 padding: 25px 15px;
             }
 
-            .position-card {
-                padding: 20px;
+            .robot-body {
+                font-size: 100px;
+            }
+
+            .robot-text {
+                font-size: 1em;
             }
 
             .email-link {
@@ -233,8 +195,13 @@
                 font-size: 1em;
             }
 
-            .positions-grid {
-                grid-template-columns: 1fr;
+            .robot-body {
+                font-size: 80px;
+            }
+
+            .robot-text {
+                font-size: 0.9em;
+                padding: 0 10px;
             }
 
             .email-link {
@@ -268,69 +235,22 @@
         </header>
 
         <main class="jobs-section">
-            <h2 class="section-title">We're Hiring!</h2>
+            <h2 class="section-title">We're Not Currently Hiring</h2>
             
-            <div class="highlight-box">
-                <h3>🎯 3 Junior Software Engineer Positions Available</h3>
-                <p>Join our innovative team and help revolutionize warehouse automation!</p>
-            </div>
-
-            <div class="positions-grid">
-                <div class="position-card">
-                    <h3 class="position-title">🎨 Front End Web UI Developer</h3>
-                    <ul>
-                        <li>Build HMI (Human Machine Interface) for operators and floor managers</li>
-                        <li>Develop interfaces to view and control warehouse robots</li>
-                        <li>Work with Vue.js framework</li>
-                        <li>Lead UI/UX design initiatives</li>
-                        <li>Strong attention to detail required</li>
-                    </ul>
-                </div>
-
-                <div class="position-card">
-                    <h3 class="position-title">⚙️ Back End DevOps/Process Management</h3>
-                    <ul>
-                        <li>Focus on warehouse inventory management solutions</li>
-                        <li>Interface with external devices and systems</li>
-                        <li>Manage communication with backend servers</li>
-                        <li>Learn and solve industry-specific challenges</li>
-                        <li>Create and maintain DevOps deployment pipelines</li>
-                    </ul>
-                </div>
-
-                <div class="position-card">
-                    <h3 class="position-title">🔧 Back End General Developer</h3>
-                    <ul>
-                        <li>Assist wherever needed to balance team workload</li>
-                        <li>Focus on debugging and testing</li>
-                        <li>Handle smaller tasks from the workflow board</li>
-                        <li>Support the development team across projects</li>
-                        <li>Contribute to overall system reliability</li>
-                    </ul>
+            <div class="robot-container">
+                <div class="robot">
+                    <span class="robot-body">🤖</span>
                 </div>
             </div>
 
-            <div class="requirements-section">
-                <h3>📋 Position Requirements</h3>
-                <p><strong>All positions require frequent travel to onsite locations</strong> for system installation, maintenance, and client support.</p>
-            </div>
-
-            <div class="benefits-section">
-                <h3>🏔️ Work Location & Benefits</h3>
-                <ul style="list-style: none; margin-left: 0;">
-                    <li style="margin-bottom: 10px;">🏠 <strong>Remote work available</strong>, but we'd love to have you relocate to the beautiful Flathead Valley, Montana!</li>
-                    <li style="margin-bottom: 10px;">💰 <strong>Salary:</strong> $70,000 - $85,000 per year</li>
-                    <li style="margin-bottom: 10px;">🏥 <strong>Health insurance</strong> included</li>
-                    <li style="margin-bottom: 10px;">📅 <strong>Start date:</strong> November 1st, 2025 (earliest)</li>
-                    <li style="margin-bottom: 10px;">🤝 <strong>In-person collaboration</strong> makes for a better work experience!</li>
-                </ul>
-            </div>
+            <p class="robot-text">All positions have been filled!</p>
+            <p class="robot-text">But our robots are still dancing... because warehouse automation is awesome! 🎉</p>
 
             <div class="contact-section">
-                <h3>Ready to Join Our Team?</h3>
-                <p>Send us your resume and any questions you might have!</p>
+                <h3>Questions?</h3>
+                <p>Feel free to reach out for general inquiries</p>
                 <a href="mailto:Eshaw@rebellionautomation.com" class="email-link">
-                    <span class="full-email">📧 Contact Us: Eshaw@rebellionautomation.com</span>
+                    <span class="full-email">📧 Eshaw@rebellionautomation.com</span>
                     <span class="short-text">📧 Contact Us</span>
                 </a>
             </div>
@@ -338,3 +258,4 @@
     </div>
 </body>
 </html>
+
